@@ -1,0 +1,34 @@
+<div class="banner">
+    <div id="overlay"></div>
+    <div class="container">
+        <div class="header">
+            <h2 class="mt-5">Crypto Watchdog</h2>
+            <h6>Your Top Cryptos at a glimpse</h6>
+        </div>
+        <div class="sub-header">
+            <marquee behavior="scroll" onmouseover="stop()" onmouseout="start()" direction="left" loop="infite">
+                <div class="row">
+                    <ng-container *ngFor="let i of bannerData">
+                        <div class="col-1">
+                            <div class="card">
+                                <img [src]="i.image" width="100" class="img-fluid" alt="">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ i.symbol | uppercase }} <span class="text-danger">{{
+                                            i.market_cap_change_percentage_24h }}%</span></h5>
+                                    <p class="card-text">{{ i.current_price | currency: "ZAR" }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </marquee>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3">
+    <table>
+
+    </table>
+</div>
