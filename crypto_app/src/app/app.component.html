@@ -1,6 +1,6 @@
 
   <mat-toolbar>
-    <span>Crypto Watchdog</span>
+    <span (click)="gotoHomePage()">Crypto Watchdog</span>
     <span class="example-spacer"></span>
     <mat-form-field>
       <mat-select (valueChange)="sendCurrenncy($event)" class="text-sm" [(ngModel)]="selectedCurrency">

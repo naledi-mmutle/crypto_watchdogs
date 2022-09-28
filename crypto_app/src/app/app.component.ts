@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   selectedCurrency = "ZAR";
 
-  constructor(){
+  constructor(private router: Router){
 
   }
 
   sendCurrenncy(event: string){
     console.log(event)
+  }
+  gotoHomePage(){
+    this.router.navigate(['']);
   }
 }
